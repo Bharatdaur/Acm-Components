@@ -1,0 +1,58 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+class saving_account{
+    string name;
+    int id;
+    int balance;
+    char choice;
+    
+  
+    public :
+      void debit(){
+        int debit;
+        cout<<"Enter the amount to debit"<<endl;
+        cin>>debit;
+        balance=balance-debit;
+    }
+     void credit(){
+        int credit;
+        cout<<"Enter the amount to debit"<<endl;
+        cin>>credit;
+        balance=balance+credit;
+    }
+    void get_data(){
+        cout<<"Enter the name"<<endl;
+        getline(cin,name);
+        cout<<"Enter the id"<<endl;
+        cin>>id;
+        cout<<"Enter the balance"<<endl;
+        cin>>balance;
+        cout<<"choose credit or debit"<<endl;
+        cin>>choice;
+    }
+    void show_data(){
+        cout<<"Student name is " <<name<<endl;
+        cout<<"Student id is " <<id<<endl;
+        cout<<"Student balance is " <<balance<<endl;
+    }
+};
+int main()
+{
+    string choice;
+    saving_account st;
+    st.get_data();
+    if(choice=="d"){ st.debit();}
+    else if (choice=="c"){ st.credit();}
+    st.show_data();
+
+    return 0;
+}
