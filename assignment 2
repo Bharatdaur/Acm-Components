@@ -13,9 +13,6 @@ class saving_account{
     string name;
     int id;
     int balance;
-    char choice;
-    
-  
     public :
       void debit(){
         int debit;
@@ -25,7 +22,7 @@ class saving_account{
     }
      void credit(){
         int credit;
-        cout<<"Enter the amount to debit"<<endl;
+        cout<<"Enter the amount to credit"<<endl;
         cin>>credit;
         balance=balance+credit;
     }
@@ -37,7 +34,6 @@ class saving_account{
         cout<<"Enter the balance"<<endl;
         cin>>balance;
         cout<<"choose credit or debit"<<endl;
-        cin>>choice;
     }
     void show_data(){
         cout<<"Student name is " <<name<<endl;
@@ -47,11 +43,12 @@ class saving_account{
 };
 int main()
 {
-    string choice;
+    char choice;
     saving_account st;
     st.get_data();
-    if(choice=="d"){ st.debit();}
-    else if (choice=="c"){ st.credit();}
+    cin>>choice;
+    if(choice=='d'){ st.debit();}
+    else if (choice=='c'){ st.credit();}
     st.show_data();
 
     return 0;
