@@ -1,4 +1,4 @@
-# OOPs Semester 3 - Projects Collection
+# ACM Components- Projects Collection
 
 This repository contains various projects and assignments for Object-Oriented Programming (OOPs) Semester 3.
 
